@@ -15,13 +15,13 @@
     "on-finished": "^2.3.0"
   },
   "scripts": {
-    "test": "mocha build/test",
+    "compile": "tsc -p .",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "tsc -p .",
     "fix": "gts fix",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile"
+    "test": "mocha build/test"
   },
   "files": [
     "build/src/*.js",
